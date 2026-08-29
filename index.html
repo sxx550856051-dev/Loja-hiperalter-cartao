@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartão de Fidelidade Digital</title>
-    <!-- 在线开源二维码生成库，免费使用 -->
+    <title>Cartão VIP Hiperalter</title>
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
     <style>
         body {
@@ -12,7 +11,7 @@
             text-align: center;
             padding: 24px;
             margin: 0;
-            color: #224470; /* 深蓝，匹配你店铺配色 */
+            color: #224470;
         }
         .qr-box {
             margin: 30px auto;
@@ -30,8 +29,7 @@
     </style>
 </head>
 <body>
-    <h3>          HiperAlter
-        O Seu Cartão de Pontos Único</h3>
+    <h3>O Seu Cartão de Pontos Único - Hiperalter</h3>
     <div class="qr-box" id="qrcode"></div>
     <p>🔽 Mantenha o dedo pressionado na imagem para guardar no telemóvel</p>
     <p class="aviso">
@@ -41,14 +39,10 @@
     </p>
 
     <script>
-        // 1. 浏览器本地生成全球唯一 UUID v4
         const unicoID = crypto.randomUUID();
-        // ========== 【后续修改这里】==========
-        // 等你做好积分核销软件，把下面链接替换成你软件的识别地址
-        const linkNossaVerificacao = "https://seu-programa-interno.com/verificar?uid=" + unicoID;
-        // ======================================
+        // ====== 最终确定地址 ======
+        const linkNossaVerificacao = "https://cartao-hiperalter/vip?uid=" + unicoID;
 
-        // 2. 绘制二维码，二维码内存储上面这个带UUID的链接
         QRCode.toCanvas(linkNossaVerificacao, {
             width: 320,
             margin: 2
