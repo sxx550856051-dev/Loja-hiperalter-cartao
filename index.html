@@ -24,7 +24,12 @@
         .aviso {
             color: #333333;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.8;
+        }
+        .assinatura {
+            color: 224470;
+            margin-top:12px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -35,13 +40,14 @@
     <p class="aviso">
         Aviso: Este cartão usa apenas um código único.<br>
         Não recolhemos o seu nome ou número de telemóvel.<br>
-        Se perder esta imagem, os pontos acumulados não poderão ser recuperados. 
-        - HiperAlter -  Zheng Shike
-    <p>
+        Se perder esta imagem, os pontos acumulados não poderão ser recuperados.
+    </p>
+    <p class="assinatura">
+        HiperAlter — Zheng Shike
+    </p>
 
     <script>
         const unicoID = crypto.randomUUID();
-        // ====== 最终确定地址 ======
         const linkNossaVerificacao = "https://cartao-hiperalter/vip?uid=" + unicoID;
 
         QRCode.toCanvas(linkNossaVerificacao, {
